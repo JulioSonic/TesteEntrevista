@@ -1,0 +1,45 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Olá Pessoas!</h1>
+<br />
+<h2>Essa aplicação foi desenvolvida com usando as seguintes tecnologias:</h2>
+
+<ul>
+    <li>Blazor</li>
+    <li>.Net 6.0</li>
+    <li>C#</li>
+    <li>Visual Studio 2022</li>
+    <li>Entity Framework Core</li>
+    <li>SQL Server</li>
+    <li>Bootstrap</li>
+</ul>
+<br />
+<h3>Rodar o script abaixo para a criação das tabelas:</h3>
+
+<p>
+    USE Teste_Entrevista
+</p>
+<p>
+    CREATE TABLE [dbo].[Usuario](
+    [ID] [int] IDENTITY(1,1) NOT NULL,
+    [Nome] [nvarchar](500) NULL,
+    [Email] [nvarchar](50) NULL,
+    CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED
+    (
+    [ID] ASC
+    )
+    )
+</p>
+<p>
+    CREATE TABLE [dbo].[Rede](
+    [ID] [int] IDENTITY(1,1) NOT NULL,
+    [Nome] [nvarchar](500) NULL,
+    [Ativo] bit NULL,
+    CONSTRAINT [PK_Rede] PRIMARY KEY CLUSTERED
+    (
+    [ID] ASC
+    )
+    )
+</p>

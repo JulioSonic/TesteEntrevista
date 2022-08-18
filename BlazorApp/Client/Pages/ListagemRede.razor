@@ -1,0 +1,120 @@
+﻿@page "/listagemredes"
+@using BlazorApp.Shared.Models
+@inject HttpClient Http
+
+<h1>Listagem de Redes</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href='/rede/add' class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Adicionar Rede
+        </a>
+    </div>
+    <div class="input-group col" style="width: 50px">
+        <input type="text" style="width: 50px" class="form-control" placeholder="Procure uma rede pelo nome"
+               @bind="SearchString" @bind:event="oninput" @onkeyup="FilterRede" />
+
+        @if (SearchString.Length > 0)
+        {
+            <div class="input-group-append" style="width: 100px">
+                <button class="btn btn-danger" style="width: 100px" value="Limpar" @onclick="ResetSearch">
+                    Limpar
+                </button>
+            </div>
+        }
+
+    </div>
+
+
+</div>
+<br />
+
+@if (redeList == null)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <table class="table table-striped align-middle table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Ativo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rede in redeList)
+            {
+                <tr>
+                    <td>@rede.ID</td>
+                    <td>@rede.Nome</td>
+
+                    @if(@rede.Ativo)
+                    {
+                        <td>Sim</td>
+                    }
+                    else
+                    {
+                        <td>Não</td>
+                    }
+                    
+                    <td>
+                        <a href='/rede/edit/@rede.ID' class="btn btn-outline-dark" role="button">
+                            Editar
+                        </a>
+                        <a href='/rede/delete/@rede.ID' class="btn btn-outline-danger" role="button">
+                            Deletar
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    protected List<Rede> redeList = new();
+    protected List<Rede> searchData = new();
+    protected Rede rede = new();
+    protected string SearchString { get; set; } = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetRede();
+    }
+
+    protected async Task GetRede()
+    {
+        redeList = await Http.GetFromJsonAsync<List<Rede>>("api/Rede");
+        searchData = redeList;
+    }
+
+    protected void FilterRede()
+    {
+        if (!string.IsNullOrEmpty(SearchString))
+        {
+            redeList = searchData
+                .Where(x => x.Nome.IndexOf(SearchString, StringComparison.OrdinalIgnoreCase) != -1)
+                .ToList();
+        }
+        else
+        {
+            redeList = searchData;
+        }
+    }
+
+    protected void DeleteConfirm(int ID)
+    {
+        rede = redeList.FirstOrDefault(x => x.ID == ID);
+    }
+
+    public void ResetSearch()
+    {
+        SearchString = string.Empty;
+        redeList = searchData;
+    }
+
+}

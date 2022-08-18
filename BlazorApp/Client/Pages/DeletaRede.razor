@@ -1,0 +1,50 @@
+﻿@page "/rede/delete/{ID:int}"
+@using BlazorApp.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h2>Deletar Rede</h2>
+<br />
+
+<div class="form-group">
+    <h4>Você quer realmente deleter essa rede?</h4>
+
+
+    <span>Nome: @rede.Nome</span><br />
+    @if (@rede.Ativo)
+    {
+        <span>Ativo: Sim</span><br />
+    }
+    else
+    {
+        <span>Ativo: Não</span><br />
+    }
+
+    
+</div>
+<div class="form-group">
+    <input type="submit" value="Deletar" @onclick="(async () => await RemoveRede(rede.ID))" class="btn btn-danger" />
+    <input type="submit" value="Cancelar" @onclick="(() => Cancel())" class="btn btn-warning" />
+</div>
+
+@code {
+    [Parameter]
+    public int ID { get; set; }
+    Rede rede = new Rede();
+
+    protected override async Task OnInitializedAsync()
+    {
+        rede = await Http.GetFromJsonAsync<Rede>("/api/Rede/" + Convert.ToInt32(ID));
+    }
+
+    protected async Task RemoveRede(int ID)
+    {
+        await Http.DeleteAsync("api/Rede/" + ID);
+        NavigationManager.NavigateTo("/listagemredes");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/listagemredes");
+    }
+}

@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = BlazorApp.Client
+build_property.RootNamespace = BlazorApp.Client
+build_property.ProjectDir = C:\Users\Julio\Downloads\Entrevista (1)\BlazorApp\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Julio\Downloads\Entrevista (1)\BlazorApp\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Pages/AdicionaRede.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRpY2lvbmFSZWRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Pages/AdicionaUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRpY2lvbmFVc3VhcmlvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Pages/DeletaRede.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRhUmVkZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Pages/DeletaUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRhVXN1YXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Pages/ListagemRede.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFnZW1SZWRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Pages/ListagemUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFnZW1Vc3VhcmlvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-33op3vkbmc
+
+[C:/Users/Julio/Downloads/Entrevista (1)/BlazorApp/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-2uyxcflnte

@@ -1,0 +1,41 @@
+﻿@page "/usuario/delete/{ID:int}"
+@using BlazorApp.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h2>Deletar Usuario</h2>
+<br />
+
+<div class="form-group">
+    <h4>Você quer realmente deleter esse usuário?</h4>
+   
+    <span>Nome: @user.Nome</span><br />
+    <span>Email: @user.Email</span><br />
+
+</div>
+<div class="form-group">
+    <input type="submit" value="Deletar" @onclick="(async () => await RemoveUser(user.ID))" class="btn btn-danger" />
+    <input type="submit" value="Cancelar" @onclick="(() => Cancel())" class="btn btn-warning" />
+</div>
+
+@code {
+    [Parameter]
+    public int ID { get; set; }
+    Usuario user = new Usuario();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        user = await Http.GetFromJsonAsync<Usuario>("/api/Usuario/" + Convert.ToInt32(ID));
+    }
+
+    protected async Task RemoveUser(int ID)
+    {
+        await Http.DeleteAsync("api/Usuario/" + ID);
+        NavigationManager.NavigateTo("/listagemusuarios");
+    }
+    
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/listagemusuarios");
+    }
+}

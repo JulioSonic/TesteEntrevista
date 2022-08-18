@@ -1,0 +1,12 @@
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\bin\Debug\net6.0\BlazorApp.Shared.deps.json
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\bin\Debug\net6.0\BlazorApp.Shared.dll
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\bin\Debug\net6.0\BlazorApp.Shared.pdb
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\BlazorApp.Shared.csproj.AssemblyReference.cache
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\BlazorApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\BlazorApp.Shared.AssemblyInfoInputs.cache
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\BlazorApp.Shared.AssemblyInfo.cs
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\BlazorApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\BlazorApp.Shared.dll
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\refint\BlazorApp.Shared.dll
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\BlazorApp.Shared.pdb
+C:\Users\julio\Downloads\BlazorApp\BlazorApp\BlazorApp\Shared\obj\Debug\net6.0\ref\BlazorApp.Shared.dll

@@ -1,0 +1,68 @@
+﻿@page "/rede/add"
+@page "/rede/edit/{ID:int}"
+@using BlazorApp.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h1>@Titulo Rede</h1>
+<hr />
+
+<EditForm Model="@rede" OnValidSubmit="SaveRede">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label for="Name" class="form-label">Nome</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="rede.Nome" />
+        </div>
+        <ValidationMessage For="@(() => rede.Nome)" />
+    </div>
+   
+     <div class="mb-3">
+        <label for="Name" class="form-label">Ativo</label>
+        <div class="col-md-4">
+            Sim <InputCheckbox @bind-Value="rede.Ativo" />
+        </div>
+     
+    </div>
+
+   
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancelar</button>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int ID { get; set; }
+
+    protected string Titulo = "Adicionar";
+    protected Rede rede = new();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (ID != 0)
+        {
+            Titulo = "Editar";
+            rede = await Http.GetFromJsonAsync<Rede>("api/Rede/" + ID);
+        }
+    }
+
+    protected async Task SaveRede()
+    {
+        if (rede.ID != 0)
+        {
+            await Http.PutAsJsonAsync("api/Rede", rede);
+        }
+        else
+        {
+            await Http.PostAsJsonAsync("api/Rede", rede);
+        }
+        Cancel();
+    }
+
+    public void Cancel()
+    {
+        NavigationManager.NavigateTo("/listagemredes");
+    }
+}
